@@ -1,7 +1,5 @@
 # 7DaysOfCode
-¡Llegó la hora, Paola! Vas a comenzar tu jornada en el #7DaysOfCode ;)
-
-
+# Dia 1
 Este primer día es muy importante. Al final de él, tendrás un nuevo conocimiento que es esencial para los próximos desafíos.
 
 
