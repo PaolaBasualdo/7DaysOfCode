@@ -43,4 +43,4 @@ while (true) {
     }
 }
 
-alert(`Elegiste el camino del ${areaSeleccionada}, vas a aprender ${tecnologiaPrincipal}. Además, te gustaría aprender: ${listaTecnologias.join(", ")}. ¡Sigue así y nunca dejes de aprender!`);*/
+alert(`Elegiste el camino del ${areaSeleccionada}, vas a aprender ${tecnologiaPrincipal}. Además, te gustaría aprender: ${listaTecnologias.join(", ")}. ¡Sigue así y nunca dejes de aprender!`);
