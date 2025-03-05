@@ -51,3 +51,47 @@ Dulces: chicle y gominola
 Existe un objeto dentro del lenguaje Javascript que se usa justamente para crear listas de elementos, llamado Array. ¡Úsalo y abusa de él!
 
 */
+let frutas = [];
+let vegetales = [];
+let almacen = [];
+let productosFrescos = [];
+let higienePersonal = [];
+let limpieza = [];
+let producto;
+let categoria;
+
+while(true){
+    let agregar = prompt('Desea agregar un producto a la Lista de Compras? Si - No : ').toLowerCase(); 
+    if (agregar === 'no'){
+        alert(`Lista de Compras:\n Frutas: ${frutas.join(', ')}\n Vegetales: ${vegetales.join(', ')}\n Almacen: ${almacen.join(', ')}\n Productos Frescos: ${productosFrescos.join(', ')}\n Higiene Personal: ${higienePersonal.join(', ')}\n Limpieza: ${limpieza.join(', ')} `)
+        break
+    }else if (agregar === 'si'){
+        producto = prompt('Que producto desea agregar?: ').toLowerCase();
+        categoria = prompt('En que categoria esta el producto?  1-Frutas\n 2-Vegetales\n 3-Almacen\n 4-Productos Frescos\n 5-Higiene Personal\n 6-Limpieza')
+        switch(categoria){
+            case ('1'): 
+                frutas.push(producto);
+                break;
+            case ('2'): 
+                vegetales.push(producto);
+                break;
+            case ('3'): 
+                almacen.push(producto);
+                break;
+            case ('4'): 
+                productosFrescos.push(producto);
+                break;
+            case ('5'): 
+                higienePersonal.push(producto);
+                break;
+            case ('6'): 
+                limpieza.push(producto);
+                break;
+            default:
+                alert('Opción no válida');
+                break;
+        } 
+    }else{
+        alert('Elija una opcion valida')
+    }
+}
