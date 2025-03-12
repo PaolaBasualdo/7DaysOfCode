@@ -1,56 +1,3 @@
-/*Piensa en cada catálogo de e-commerce que has visto, en la lista de eventos de tu Google Calendar, o incluso en tu bandeja de entrada de correos electrónicos. Todos estos sitios utilizan listas para mostrar información de una manera simple y fácil de entender.
-
- 
-
-Además, puedes aprovechar las listas para hacer filtros, ordenaciones y otras funcionalidades muy útiles.
-
- 
-
-En este punto, ya debes haber notado que trabajar con estas colecciones es algo que necesitarás dominar, ¿verdad?
-
- 
-
-Entonces hoy, para facilitar tu visita al supermercado, debes crear un programa en Javascript que pregunte si deseas agregar un alimento a tu lista de compras, y debes poder responder con "sí" o "no".
-
- 
-
-A continuación, preguntará qué alimento deseas agregar, y escribirás su nombre, como por ejemplo "zanahoria".
-
- 
-
-Después, deberá preguntar en qué categoría se encaja ese alimento, con algunas opciones ya predefinidas, como frutas, lácteos, congelados, dulces y lo que más creas interesante. Así podrás separar todo en su respectivo grupo.
-
- 
-
-Por último, en caso de que ya no quieras agregar nada más a la lista de compras y respondas "no" a la primera pregunta, se mostrará una lista con todos los ítems agrupados, de la siguiente manera:
-
- 
-
-Si añades a tu lista:
-
-banana, leche en polvo, tomate, leche vegetal, chicle, gominola, manzana, uva, aguacate y leche de vaca.
-
- 
-
-El programa debería imprimir, por ejemplo:
-
- 
-
-Lista de compras:
-
-Frutas: banana, tomate, manzana, uva, aguacate
-
-Lácteos: leche vegetal, leche de vaca, leche en polvo
-
-Congelados: 
-
-Dulces: chicle y gominola
-
- CONSEJO 
-
-Existe un objeto dentro del lenguaje Javascript que se usa justamente para crear listas de elementos, llamado Array. ¡Úsalo y abusa de él!
-
-*/
 let frutas = [];
 let vegetales = [];
 let almacen = [];
@@ -95,3 +42,38 @@ while(true){
         alert('Elija una opcion valida')
     }
 }
+//SOLUCION PROPUESTA
+/*let frutas = [];
+let lacteos = [];
+let dulces = [];
+let congelados = [];
+let comida = "";
+let categoria = "";
+
+let agregarMas = "sí";  // valor inicial como "sí", porque la primera vez siempre va a entrar en el while
+while(agregarMas != "no"){
+    agregarMas = prompt("¿Deseas agregar una comida a la lista de compras? Responde 'sí' o 'no'.");
+    while (agregarMas != "sí" && agregarMas != "no") {  //mientras el texto leído sea diferente de "sí" y de "no", mostrar que no fue reconocido y preguntar nuevamente
+	alert("¡Operación no reconocida!");
+        agregarMas = prompt("¿Deseas agregar una comida a la lista de compras? Responde 'sí' o 'no'.");
+    }
+	
+    if (agregarMas === "no"){  //si el texto leído es "no", salir del while
+        break;
+    }
+	
+    comida = prompt("¿Qué comida deseas agregar?");
+    categoria = prompt("¿En qué categoria encaja esta comida: 'frutas', 'lacteos', 'dulces' o 'congelados'?");
+    if(categoria === 'frutas'){
+        frutas.push(comida);
+    } else if (categoria === 'lacteos'){
+        lacteos.push(comida);
+    } else if (categoria === 'dulces'){
+        dulces.push(comida);
+    } else if (categoria === 'congelados'){
+        congelados.push(comida);
+    } else {
+        alert("Esa categoria no está predefinida.")
+    }
+}
+alert("Lista de compras:\n  Frutas: ${frutas}\n  Lácteos: ${lacteos}\n  Dulces: ${dulces}\n  Congelados: ${congelados}");*/
